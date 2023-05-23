@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de conta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <a href="/ProjetoIntegrador/1.html"><img src="/ProjetoIntegrador/logo.png" alt="Logo da empresa RangoTop" style="height: 200px;"></a>
+    </header>
+    <h1 class=" d-flex align-self-center justify-content-center">Configuração da conta</h1>
+        <div class="div-foto-perfil  d-flex align-self-center justify-content-center">
+            <img src="img/profile-icon.webp" id="foto" alt="Foto de perfil do usuario">
+            <input type="file" name="arquivo" id="arquivo">
+            <label for="arquivo" id="botao-upload">Escolha uma foto</label>
+        </div> 
+        <main class="alinhamento">  
+            <form method="post" onsubmit="sucesso(); return false;">
+                <div class="mb-3">
+                    <label for="cep">CEP</label>
+                        <input placeholder="XXXXXX-XXX"
+                          type="text" 
+                          class="form-control"
+                          onkeypress="$(this).mask('00.000-000')"
+                          required
+                          minlength="10"
+                          id="cep"
+                        >
+                        <label>Estado</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        required
+                        placeholder="Ex: São paulo"
+                        >
+                        <label>Cidade</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        required
+                        placeholder="Ex: Matão"
+                        >
+                        <label>Bairro</label>
+                            <input
+                            type="text"
+                            class="form-control"
+                            required
+                            placeholder="Ex: Adauto"
+                        >
+                        <label>Rua</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        required
+                        placeholder="Ex: Rua Prof Tbone"
+                        >
+                        <label>Número</label>
+                        <input
+                        type="number"
+                        class="form-control"
+                        required
+                        placeholder="Ex: 000"
+                        >
+                    </div>
+                            <select name="estado" id="estado" >
+                                <option value="SP">São Paulo</option>
+                            </select> 
+                            <select name="Cidade" id="Cidade">
+                                <option value="Matão">Matão</option>
+                                <option value="Araraquara">Araraquara</option>
+                                <option value="Campinas">Campians</option>
+                                <option value="Ribeirão Preto">Ribeirão Preto</option>
+                                <option value="São Carlos">São Carlos</option>
+                            </select> 
+
+                <div id="campo-cartão">
+                            <div class="mb-3">
+                                <label>Nome Cartão</label>
+                                <input placeholder="Ex: Douglas Ribeiro"
+                                type="text"
+                                class="form-control"
+                                required
+                                >
+                                <label>Número Cartão</label>
+                                <input placeholder="XXXX-XXXX-XXXX-XXXX"
+                                type="text"
+                                class="form-control"
+                                onkeypress="$(this).mask('0000-0000-0000-0000')"
+                                required
+                                minlength="19"
+                              >
+                                <label>Número Segurança</label>
+                                <input placeholder="XXX"
+                                type="text"
+                                class="form-control"
+                                onkeypress="$(this).mask('000')"
+                                required
+                                minlength="3"
+                              >
+                                <label>Expiração:</label> 
+                                <select>
+                                    <option value='01'>Janeiro</option>
+                                    <option value='02'>Fevereiro</option>
+                                    <option value='03'>Março</option>
+                                    <option value='04'>Abril</option>
+                                    <option value='05'>Maio</option>
+                                    <option value='06'>Junho</option>
+                                    <option value='07'>Julho</option>
+                                    <option value='08'>Agosto</option>
+                                    <option value='09'>Setembro</option>
+                                    <option value='10'>Outubro</option>
+                                    <option value='11'>Novembro</option>
+                                    <option value='12'>Dezembro</option>
+                                </select> 
+                                    <select name='anoexpiração' id='anoexpiração'>
+                                        <option value='20'>2020</option>
+                                        <option value='21'>2021</option>
+                                        <option value='22'>2022</option>
+                                        <option value='23'>2023</option>
+                                        <option value='24'>2024</option>
+                                    </select> 
+                                </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="submit1">Salvar</button>
+                    <button type="submit" class="submit1">Configuração da loja</button>
+                    <button type="reset" class="submit1">Limpar</button>
+                </div>
+                <p id="sucesso">Configurado com sucesso</p>
+            </form>
+        </main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+    const imgDiv = document.querySelector('.div-foto-perfil');
+    const img = document.querySelector('#foto');
+    const file = document.querySelector('#arquivo');
+    const uploadBtn = document.querySelector('#botao-upload');
+    
+    imgDiv.addEventListener('mouseenter', function(){
+        uploadBtn.style.display = "block";
+    });
+    
+    imgDiv.addEventListener('mouseleave', function(){
+        uploadBtn.style.display = "none";
+    });
+    
+    file.addEventListener('change', function(){
+        const choosedFile = this.files[0];
+        if (choosedFile) {
+            const reader = new FileReader(); 
+            reader.addEventListener('load', function(){
+                img.setAttribute('src', reader.result);
+            });
+            reader.readAsDataURL(choosedFile);
+        }
+    });
+    </script>
+    <script src="JS/cliente.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</body>
+</html>
